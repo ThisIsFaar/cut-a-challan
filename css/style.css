@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #ffc600;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/* *****     Body CSS     ***** */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+
+/* *****     Background Virus CSS     ***** */
+
+#bg_virus {
+  position: absolute;
+}
+
+.bg_virus_small {
+  cursor: url("../img/banned.png"), auto;
+  transition: 0.3s;
+  margin-top: 10vw;
+  margin-left: 10vh;
+  position: absolute;
+}
+
+.bg_virus_medium {
+  cursor: url("../img/banned.png"), auto;
+  transition: 0.3s;
+  margin-top: 10vw;
+  margin-left: 10vh;
+  position: absolute;
+}
+
+.bg_virus_large {
+  cursor: url("../img/banned.png"), auto;
+  transition: 0.3s;
+  margin-top: 10vw;
+  margin-left: 10vh;
+  position: absolute;
+}
+
+.bg_virus_large:hover,
+.bg_virus_medium:hover,
+.bg_virus_small:hover {
+  width: 170px;
+  animation: width 5s;
+}
+
+
+/* *****     Game Heading     ***** */
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+  font-family: 'Boogaloo', cursive;
+}
+
+
+/*  */
+
+
+/* *****     Game Main Content     ***** */
+
+.wrapper {
+  cursor: url("../img/cursor.png"), auto;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.door {
+  flex: 1 0 23.33%;
+  position: relative;
+}
+
+.door:after {
+  display: block;
+  background: url(../img/door.png) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 115%;
+  height: 250px;
+  position: absolute;
+  z-index: 2;
+  bottom: -1px;
+}
+
+.person {
+  opacity: 0%;
+  /* background: url(../img/person21.png) bottom center no-repeat; */
+  background-size: 30% !important;
+  position: absolute;
+  top: 0%;
+  width: 150%;
+  height: 90%;
+  z-index: -1;
+}
+
+.opacity_changer {
+  opacity: 100% !important;
+  z-index: 3;
+}
+
+
+/* *****     Control Buttons (Music, Restart)     ***** */
+
+#music_bg {
+  position: fixed;
+  top: -7%;
+  right: 6%;
+  color: #464a76;
+  padding: 1%;
+  font-size: 200%;
+  background-color: #f7fbfa;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5% !important;
+  margin-left: 44% !important;
+  width: 4%;
+  outline: none;
+}
+
+#restart_game:hover {
+  color: #f7fbfa;
+  background-color: #464a76;
+  cursor: pointer;
+  border: 1px ridge #464a76;
+}
+
+#restart_game {
+  position: fixed;
+  top: -7%;
+  right: 1%;
+  color: #464a76;
+  padding: 1%;
+  font-size: 200%;
+  background-color: #f7fbfa;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5% !important;
+  margin-left: 44% !important;
+  width: 4%;
+  outline: none;
+}
+
+#music_bg:hover {
+  color: #f7fbfa;
+  background-color: #464a76;
+  cursor: pointer;
+  border: 1px ridge #464a76;
+}
+
+
+/* *****     Target Bar     ***** */
+
+#target_bar_fill {
+  transition: 0.8s;
+  height: 0px;
+  border-bottom-left-radius: 20px;
+  background-color: #b175a2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#target_bar {
+  position: fixed;
+  width: 5%;
+  height: 460px;
+  background-color: aliceblue;
+  right: 40px;
+  top: 128px;
+  border-radius: 20px;
+}
+
+#money_bg {
+  top: -56px;
+  right: -29px;
+  background-color: #fff700;
+  position: absolute;
+  border-radius: 27px;
+  padding-right: 0px;
+}
+
+#target_bar span {
+  position: absolute;
+  z-index: 4;
+  top: 34px;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  color: goldenrod;
+}
+
+
+/* *****     Insignia Rank Card     ***** */
+
+#star_bar {
+  position: fixed;
+  left: 100%;
+  bottom: -17px;
+  color: #e9ff70;
+}
+
+#star1 {
+  position: absolute;
+  bottom: 40px;
+  right: 120px;
+}
+
+#star2 {
+  position: absolute;
+  bottom: 40px;
+  right: 85px;
+}
+
+#star3 {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+}
+
+#star_bar img {
+  position: absolute;
+  bottom: -25%;
+  right: -20%;
+  z-index: -1;
+}
+
+
+/* *****     Modals     ***** */
+
+
+/* Modal Control */
+
+#welcome_m {
+  display: block;
+  z-index: 4;
+}
+
+#tutorial_1 {
+  display: none;
+  z-index: 4;
+}
+
+#controls_modal {
+  display: none;
+  z-index: 3;
+}
+
+#cut_challan_modal {
+  display: none;
+  z-index: 4;
+}
+
+#insignia_modal {
+  display: none;
+  z-index: 4;
+}
+
+#countdown_modal {
+  display: none;
+  z-index: 4;
+}
+
+#game_won_modal {
+  display: none;
+  z-index: 4;
+}
+
+#game_over_modal {
+  display: none;
+  z-index: 4;
+}
+
+
+/* Basic Property of All Modals */
+
+.modal_bg {
+  box-shadow: 120px 80px 40px 20px #0ff;
+  position: fixed;
+  z-index: 2;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_fg {
+  background-color: aliceblue;
+  box-shadow: 1px 1px 15px 2px #0ff;
+  margin: auto;
+  padding: 0;
+  border-radius: 25px;
+  border: 2px outset #00c4ff;
+  width: 65%;
+  height: 75%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal_bbm {
+  box-shadow: 1px 1px 15px 2px #0ff;
+  font-size: 200%;
+  background-color: #f7fbfa;
+  color: #464a76;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  padding: 10px;
+  bottom: -8%;
+  margin-left: 1%;
+  left: 36%;
+}
+
+.modal_bbm:hover {
+  color: #f7fbfa;
+  background-color: #464a76;
+  cursor: pointer;
+  border: 1px ridge #464a76;
+}
+
+
+/* Welcome Modal */
+
+.welcome_m_d_c_music {
+  box-shadow: 1px 1px 20px 8px #0ff;
+  position: fixed;
+  top: -7%;
+  right: 2%;
+  color: #464a76;
+  padding: 1%;
+  font-size: 200%;
+  background-color: #f7fbfa;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5% !important;
+  margin-left: 44% !important;
+  width: 4%;
+  outline: none;
+}
+
+.welcome_m_d_c_music:hover {
+  color: #f7fbfa;
+  background-color: #464a76;
+  cursor: pointer;
+  border: 1px ridge #464a76;
+}
+
+#welcome_m_div {
+  position: relative;
+}
+
+#welcome_m_d_content {
+  width: 64%;
+  height: 70vh;
+  position: absolute;
+  margin-left: 31%;
+  margin-top: 15%;
+}
+
+#welcome_m_d_content h1 {
+  width: 100%;
+  font-family: 'Boogaloo', cursive;
+}
+
+
+/* Game Concept Modal */
+
+#tutorial_1_div {
+  position: relative;
+}
+
+#demo {
+  color: #1d2132;
+  position: absolute;
+  font-size: 250%;
+  text-align: justify;
+  padding: 17px;
+}
+
+#rules_div h1 {
+  font-size: 300%;
+  color: red;
+  position: absolute;
+  left: 30%;
+  top: 3%;
+}
+
+#rules_div {
+  width: 60%;
+  height: 62vh;
+  margin-left: 36%;
+  padding-top: 4%;
+}
+
+#rules_div {
+  position: relative;
+}
+
+
+/* Bar's Intro Modal */
+
+#controls_div img {
+  position: absolute;
+  border-radius: 20px;
+  border: 3px ridge aliceblue;
+}
+
+#controls_div span {
+  position: absolute;
+  font-size: 228%;
+  text-align: justify;
+}
+
+#controls_div {
+  position: relative;
+}
+
+#controls_div h1 {
+  font-size: 300%;
+  color: red;
+  position: absolute;
+  left: 59%;
+  top: 3%;
+}
+
+#target_bar_demo {
+  width: 14%;
+  left: 40%;
+  top: 14px;
+}
+
+#star_stripes_demo {
+  left: 69%;
+  width: 23%;
+  top: 345px;
+}
+
+#target_demo {
+  top: 100px;
+  left: 55%;
+}
+
+.fa-arrow-down {
+  top: 305px;
+  left: 78%;
+  position: absolute;
+}
+
+#insignia_demo {
+  top: 275px;
+  left: 58%;
+}
+
+
+/* Challan Cut Modal */
+
+#cut_challan_div {
+  width: 60%;
+  height: 62vh;
+  margin-left: 36%;
+  padding-top: 4%;
+}
+
+#cut_challan_div p {
+  position: absolute;
+  font-size: 239%;
+  top: 20%;
+  text-align: justify;
+}
+
+#cut_challan_div img {
+  position: absolute;
+  width: 40%;
+  top: 61%;
+  left: 27%;
+  border-radius: 25px;
+}
+
+#cut_challan_div h1 {
+  font-size: 300%;
+  color: red;
+  position: absolute;
+  left: 28%;
+  top: 3%;
+}
+
+#cut_challan_div {
+  position: relative;
+}
+
+
+/* Rank Card Modal */
+
+#insignia_div {
+  width: 60%;
+  height: 62vh;
+  margin-left: 36%;
+  padding-top: 4%;
+}
+
+#insignia_div p {
+  position: absolute;
+  font-size: 200%;
+  top: 22%;
+  right: 30%;
+  left: 36%;
+  text-align: justify;
+}
+
+#insignia_div img {
+  position: absolute;
+  width: 21%;
+  top: 27%;
+  left: 72%;
+  border-radius: 25px;
+}
+
+#insignia_modal_div h1 {
+  font-size: 282%;
+  color: red;
+  position: absolute;
+  left: 38%;
+  top: 3%;
+}
+
+#insignia_modal_div {
+  position: relative;
+}
+
+
+/* Countdown Modal */
+
+#countdown_gif {
+  position: absolute;
+  width: 25%;
+  border-radius: 50px;
+  top: 20%;
+  left: 36%;
+}
+
+
+/* Game Won Modal */
+
+#game_won_modal_div {
+  width: 60%;
+  height: 62vh;
+  margin-left: 36%;
+  padding-top: 4%;
+}
+
+#game_won_modal_div h1 {
+  font-size: 300%;
+  color: green;
+  position: absolute;
+  left: 55%;
+  top: 3%;
+}
+
+#game_won_modal_div p {
+  position: absolute;
+  font-size: 315%;
+  top: 25%;
+}
+
+
+/* Game Over Modal */
+
+#game_over_modal_div {
+  width: 60%;
+  height: 62vh;
+  margin-left: 36%;
+  padding-top: 4%;
+}
+
+#game_over_modal_div h1 {
+  font-size: 300%;
+  color: red;
+  position: absolute;
+  left: 55%;
+  top: 3%;
+}
+
+#game_over_modal_div p {
+  position: absolute;
+  font-size: 230%;
+  top: 25%;
+}
+
+#police_img {
+  position: absolute;
+  width: 100%;
+  height: 68vh;
+  border-radius: 30px;
+}
