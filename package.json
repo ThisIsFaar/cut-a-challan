@@ -1,0 +1,22 @@
+{
+  "name": "cut-a-challan",
+  "version": "1.0.0",
+  "description": "A RPG simple game made with vanilla JS\r Live At: http://codebyfarhan.rf.gd/cutachallan",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisIsFaar/cut-a-challan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThisIsFaar/cut-a-challan/issues"
+  },
+  "homepage": "https://github.com/ThisIsFaar/cut-a-challan#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

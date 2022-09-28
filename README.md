@@ -1,3 +1,3 @@
 # cut-a-challan
 A RPG simple game made with vanilla JS
-Live At: http://codebyfarhan.rf.gd/cutachallan
+Live At: https://cut-a-challan.herokuapp.com/
