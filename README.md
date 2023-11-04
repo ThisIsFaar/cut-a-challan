@@ -1,3 +1,6 @@
 # cut-a-challan
-A RPG simple game made with vanilla JS
-Live At: https://cut-a-challan.herokuapp.com/
+Developed a RPG game using HTML, CSS, and JavaScript.
+
+providing an engaging user experience with interactive gameplay elements.
+
+Live At: https://cut-a-challan.onrender.com/
